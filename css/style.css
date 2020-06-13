@@ -24,7 +24,7 @@ hr {
     border-top-style: dotted;
     border-color: gray;
     border-width: 5px;
-    width: 5%;
+    width: 9%;
 }
 
 hr:hover {
@@ -99,9 +99,21 @@ div {
     }
 }
 
+
+/* --------------------------------- Second Container --------------------------------- */
+
 .middle-container {
     margin-bottom: 0px;
     padding-bottom: 0px;
+}
+
+.intro {
+    width: 35%;
+    font-size: 20px;
+    font-weight: 500;
+    margin: auto;
+    line-height: 2;
+    color: cornflowerblue;
 }
 
 .middle-container h2 {
@@ -122,23 +134,84 @@ div {
     font-variant-caps: all-small-caps;
 }
 
-.intro {
-    width: 35%;
-    line-height: 2;
-    font-size: 20px;
-    font-weight: 500;
-    margin: auto;
-    color: cornflowerblue;
+#comptia {
+    width: 275px;
+    height: 50px;
+    padding: 23px;
+}
+
+#star-cert {
+    padding: 25px;
+    height: 50px;
+    margin: 15px;
+}
+
+#redhat {
+    margin-top: 3px;
+    padding-left: 20px;
+}
+
+.cert-row-red {
+    width: 75%;
+    margin: 50px auto 50px auto;
+    text-align: left;
+}
+
+.cert-row-red:hover>#comptia {
+    text-align: left;
+    color: red;
+    transition: 2s;
+}
+
+.cert-row-red:hover>#redhat {
+    text-align: left;
+    color: red;
+    transition: 2s;
+}
+
+.rhead {
+    float: left;
+    margin-right: 35px;
+    width: 25%;
 }
 
 .rhead:hover {
+    text-align: center;
     color: red;
     transition: 1.5s;
 }
 
-.ghead:hover {
+.cert-row-star {
+    width: 75%;
+    margin: 50px auto 50px auto;
+    text-align: left;
+}
+
+.cert-row-star:hover>#star-cert {
+    text-align: center;
     color: green;
     transition: 1.5s;
+}
+
+.ghead {
+    float: right;
+}
+
+.cert-row-star p {
+    margin-right: 25px;
+    text-align: right;
+}
+
+.ghead:hover {
+    text-align: center;
+    color: green;
+    transition: 1.5s;
+}
+
+.cert-desc {
+    text-align: left;
+    line-height: 2;
+    margin-left: 35px;
 }
 
 .star li {
@@ -176,13 +249,6 @@ li {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 175px;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 @media screen and (max-width: 600px) {
@@ -192,61 +258,240 @@ li {
 }
 
 .schart {
-    padding: 250px;
-    padding-top: 0px;
+    padding: 200px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    height: 250px;
     text-align: left;
 }
 
 .container {
     width: 100%;
-    background-color: #ddd;
+    margin: 10 auto 10 auto;
+    background-color: transparent;
 }
 
 .skills {
-    text-align: right;
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: white;
+    color: steelblue;
+}
+
+.schart:hover #html {
+    color: whitesmoke;
+    width: 95%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: .5s;
+}
+
+.schart:hover #css {
+    color: whitesmoke;
+    width: 85%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 1s;
+}
+
+.schart:hover #js {
+    color: whitesmoke;
+    width: 60%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 2s;
+}
+
+.schart:hover #java {
+    color: whitesmoke;
+    width: 75%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 1.5s;
+}
+
+.schart:hover #c {
+    color: whitesmoke;
+    width: 90%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: .5s;
+}
+
+.schart:hover #cpp {
+    color: whitesmoke;
+    width: 80%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 1.5s;
+}
+
+.schart:hover #csharp {
+    color: whitesmoke;
+    width: 85%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 1s;
+}
+
+.schart:hover #python {
+    color: whitesmoke;
+    width: 75%;
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    animation-delay: 2s;
 }
 
 .html {
-    width: 95%;
+    width: 0;
     background-color: #00b0ff;
+    animation-name: html;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+@keyframes html {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 95%;
+    }
+}
+
+@keyframes css {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes js {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 60%;
+    }
+}
+
+@keyframes java {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes c {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+@keyframes cpp {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes csharp {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes python {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 75%;
+    }
 }
 
 .css {
-    width: 80%;
+    width: 0;
     background-color: #0091ea;
+    animation-name: css;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .js {
-    width: 60%;
+    width: 0;
     background-color: #0091ea;
+    animation-name: js;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .java {
-    width: 75%;
+    width: 0;
     background-color: #00b0ff;
+    animation-name: java;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .c {
-    width: 90%;
+    width: 0;
     background-color: #0091ea;
+    animation-name: c;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .cpp {
-    width: 80%;
+    width: 0;
     background-color: #00b0ff;
+    animation-name: cpp;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .csharp {
-    width: 90%;
+    width: 0;
     background-color: #0091ea;
+    animation-name: csharp;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .python {
-    width: 80%;
+    width: 0;
     background-color: #00b0ff;
+    animation-name: python;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused
 }
 
 .bottom-container {
@@ -256,8 +501,9 @@ li {
 }
 
 .contact-message {
-    width: 40%;
+    width: 50%;
     margin: 40px auto 60px;
+    padding: 15px;
 }
 
 .contact-message p {
